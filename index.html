@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light m-md-5 my-5">
+  
+    <div class="container">
+        
+        <div class="col-md-9" style="margin: auto;">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="bootstrap-logo" width="75">
+                    <h2 class="m-3">Checkout form</h2>
+                    <h5 class="fw-light lh-base">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</h5>
+                </div>
+            </div>
+    
+            <div class="row mt-5 d-flex flex-row-reverse">
+
+                <div class="col-lg-4">
+
+                   <div class="d-flex    justify-content-between ">
+                     <h4 class="text-primary">Your cart</h4>
+                     <h5 class="bg-primary text-white rounded-circle px-2">3</h5>
+                   </div>
+
+                   <table class="table table-borderless bg-white">
+                      <tbody>
+                        <tr class="border">
+                            <td>
+                                <div style="font-weight: 600;">
+                                Product name</div>
+                                <div class="text-secondary" style="font-size: 0.85rem;">Brief description
+                                </div>
+                            </td>
+                            <td class="text-end text-secondary">$12</td>
+                        </tr>
+
+                      <tr class="border">
+                        <td>
+                            <div style="font-weight: 600;">
+                            Second product</div>
+                            <div class="text-secondary" style="font-size: 0.85rem;">Brief description
+                            </div>
+                        </td>
+                        <td class="text-end text-secondary">$8</td>
+                      </tr>
+
+                      <tr class="border">
+                        <td>
+                            <div style="font-weight: 600;">
+                            Third item</div>
+                            <div class="text-secondary" style="font-size: 0.85rem;">Brief description
+                            </div>
+                        </td>
+                        <td class="text-end text-secondary">$5</td>
+                      </tr>
+
+                      <tr class="border">
+                        <td>
+                            <div style="font-weight: 600;" class="text-success">
+                            Promo code</div>
+                            <div class="text-success" style="font-size: 0.85rem;">EXAMPLECODE
+                            </div>
+                        </td>
+                        <td class="text-end text-success">-$5</td>
+                      </tr>
+
+                      <tr class="border">
+                        <td>
+                            <div>
+                            Total (USD)</div>
+                        </td>
+                        <td class="text-end fw-bold">$20</td>
+                      </tr>
+                    </tbody>
+                   </table>
+
+                   <div class="input-group p-2 border bg-white rounded">
+                        <input type="text" class="form-control" placeholder="Promo code">
+                        <button class="btn btn-secondary">Redeem</button>
+                   </div>
+                   
+                </div>
+
+                <form id="my_form" class="col col-lg-8 mt-5 mt-lg-0">
+                    
+                  <h4>Billing address</h4>
+    
+                  <div class="input-group-lg row-cols-lg-2 row my-3">
+                        <label for="first-name" class="form-label pe-lg-3">First name
+                            <input type="text" id="first-name" class="form-control" octavalidate="R,ALPHA_SPACES" ov-username-msg="This name is invalid">
+                        </label>
+                  
+                        <label for="last-name" class="form-label">Last name
+                            <input type="text" id="last-name" class="form-control" octavalidate="R,ALPHA_SPACES" ov-username-msg="This name is invalid">
+                        </label>
+                  </div>
+    
+                  <div class="row my-3">
+                    <label for="user-name" class="form-label">Username
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="Username" id="user-name" octavalidate="R,USERNAME" ov-username-msg="This username is invalid">
+                          </div>
+                    </label>
+                  </div>
+    
+                  <div class="row my-3">
+                    <label for="email" class="form-label col-12">Email<span class="text-secondary">(Optional)</span>
+                        <input type="email" id="email" class="form-control" placeholder="you@example.com" octavalidate="EMAIL" ov-text-msg="This email is invalid">
+                    </label>
+                  </div>
+    
+                  <div class="row my-3">
+                    <label for="address" class="form-label col-12">Address
+                        <input type="text" id="address1" class="form-control" placeholder="1234 Main St" octavalidate="R,TEXT" ov-text-msg="Invalid address input">
+                    </label>
+                  </div>
+    
+                  <div class="row my-3">
+                    <label for="address" class="form-label col-12">Address 2
+                        <span class="text-secondary">(Optional)</span>
+                        <input type="text" id="address2" class="form-control" placeholder="Apartment or suite" octavalidate="TEXT" ov-text-msg="Invalid address input">
+                    </label>
+                  </div>
+    
+                  <div class="row my-3">
+                        <label for="country" class="form-label col-lg-4 mb-4 mb-lg-2">Country
+                            <select class="form-select" id="country" octavalidate="R" ov-required-msg="Please select a country">
+                               <option hidden value="">Choose....</option>
+                               <option value="India">India</option>
+                            </select>
+                        </label>
+                    
+                        <label for="state" class="form-label col-lg-4 mb-4 mb-lg-2">State
+                            <select class="form-select" id="state" octavalidate="R" ov-required-msg="Please select a state">
+                               <option hidden value="">Choose....</option>
+                               <option value="Tamil Nadu">Tamil Nadu</option>
+                            </select>
+                        </label>
+    
+                        <label for="zip" class="form-label col-lg-4 mb-3 mb-lg-2">Zip
+                            <input type="text" class="form-control" id="zip" length="6" octavalidate="R,DIGITS" ov-digits-msg="Please enter valid zipcode">
+                        </label>
+                  </div>
+    
+                  <div class="row">
+    
+                    <label for="ship-text" class="form-check-label col-12">
+                        <div class="border"></div>
+                            <br>
+                        <input type="checkbox" class="form-check-input" id="ship-text">
+                    Shipping address is the same as my billing address
+                    </label>
+                    
+                    <label for="save-text" class="form-check-label col-12 mt-1">
+                        <input type="checkbox" class="form-check-input" id="save-text">
+                        Save this information for next time
+                        <br>
+                        <br>
+                        <div class="border-bottom"></div>
+                    </label>
+                        
+                  </div>
+    
+                  <div class="row my-3 col-5">
+                    <h4>Payment</h4>
+                    <label for="credit" class="form-check-label my-1">
+                        <input type="radio" class="form-check-input" id="credit" name="payment" value="credit-card">
+                        <span class="ps-1">Credit card</span>
+                    </label>
+    
+                    <label for="debit" class="form-check-label mb-1">
+                        <input type="radio" class="form-check-input" id="debit" name="payment">
+                        <span class="ps-1">Debit card</span>
+                    </label>
+    
+                    <label for="paypal" class="form-check-label mb-1">
+                        <input type="radio" class="form-check-input" id="paypal" name="payment">
+                        <span class="ps-1">Paypal</span>
+                    </label>
+                  </div>
+    
+                  <div class="row-cols-lg-2 row my-3">
+                    <label for="name" class="form-label ">Name on card
+                        <input type="text" id="name" class="form-control" octavalidate="R,ALPHA_SPACES" ov-alpha-spaces-msg="Please enter valid name">
+                        <span class="text-secondary">Full name as displayed on card</span>
+                    </label>
+    
+                    <label for="credit-number" class="form-label mt-3 mt-lg-0">Credit card number
+                        <input type="text" id="credit-number" class="form-control" octavalidate="R,DIGITS" ov-digits-msg="Please enter valid card number">
+                    </label>
+                  </div>
+    
+                  <div class="row-cols-lg-4 row my-3">
+                    <label for="expire" class="form-label">Expiration
+                        <input type="text" id="expire" class="form-control" octavalidate="R,DIGITS" ov-digits-msg="invalid input">
+                    </label>
+    
+                    <label for="cvv" class="form-label mt-3 mt-lg-0">CVV
+                        <input type="text" id="cvv" class="form-control"  octavalidate="R,DIGITS" ov-digits-msg="invalid input">
+                        
+                    </label>
+                   
+                  </div>
+    
+                  <p class="border"></p>
+    
+                  <button class="btn btn-primary py-2 col-12" type="submit">
+                    <span class="h5 fw-normal">Continue to checkout</span>
+                  </button>
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <script src="octaValidate-main/octaValidate-main/src/validate.js"></script>
+
+  <script>
+    const myForm = new octaValidate('my_form');
+    document.querySelector('#my_form').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(myForm.validate() === true){ 
+    } else {
+    }
+    })
+    
+  </script>
+</body>
+
+</html>
